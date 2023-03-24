@@ -21,9 +21,9 @@ const Layout = () => {
         <div
           className={`fixed top-[70px] ${
             isSidebarOpen ? "left-0" : "left-[-999px]"
-          } w-[200px] bg-gray-100 bottom-0  lg:hidden duration-700 ease-linear`}
+          } w-[240px] bg-gray-100 bottom-0  lg:hidden duration-700 ease-linear`}
         >
-          <Sidebar />
+          <Sidebar title={true} />
         </div>
 
         <Outlet />

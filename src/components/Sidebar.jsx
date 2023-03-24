@@ -2,10 +2,20 @@ import { Link } from "react-router-dom";
 import { AiTwotoneHome } from "react-icons/ai";
 import { MdCreateNewFolder } from "react-icons/md";
 
-const Sidebar = () => {
+const Sidebar = ({ title }) => {
   return (
     <section className="w-full h-full">
-      <div className="flex flex-col items-center mt-4 gap-3 px-4">
+      <div
+        className={`flex flex-col items-center ${
+          title && "!my-2"
+        } my-6 gap-3 px-4`}
+      >
+        {title && (
+          <h1 className="text-2xl lg:text-3xl xl:text-4xl font-semibold">
+            News<span className="text-[#4d75cc]">Grid</span>
+          </h1>
+        )}
+
         <Link to="/" className="link">
           <AiTwotoneHome className="text-xl" />
           <p>Home</p>
