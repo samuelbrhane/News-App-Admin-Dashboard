@@ -22,12 +22,10 @@ const Home = () => {
     fetchData();
   }, [dataLimit, pageNo]);
 
-  console.log("setNewsCount", newsCount);
-
   return (
-    <section className="ml-[260px] py-2 lg:py-6">
-      <h1 className="font-bold text-xl">News</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-4 xl:gap-6">
+    <section className="lg:ml-[260px] py-2 lg:py-6">
+      <h1 className="font-bold text-xl md:text-2xl lg:text-3xl mb-4">News</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-4 xl:gap-6 px-4">
         {newsData?.map((news) => (
           <NewsCard key={news._id} news={news} />
         ))}

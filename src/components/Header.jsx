@@ -4,7 +4,7 @@ import { BiMenuAltLeft } from "react-icons/bi";
 
 const Header = ({ setIsSidebarOpen }) => {
   return (
-    <section className="bg-gray-100 py-4 shadow-md z-50 h-[70px]">
+    <section className="bg-gray-100 py-4 shadow-md h-[70px] fixed left-0 w-full z-50">
       <div className="flex items-center max-w-7xl mx-auto justify-between px-2 md:px-4">
         <h1 className="text-2xl lg:text-3xl xl:text-4xl font-semibold hidden lg:inline">
           News<span className="text-[#4d75cc]">Grid</span>

@@ -4,11 +4,11 @@ import { MdCreateNewFolder } from "react-icons/md";
 
 const Sidebar = ({ title }) => {
   return (
-    <section className="w-full h-full">
+    <section className="w-full h-full py-[10px]">
       <div
         className={`flex flex-col items-center ${
           title && "!my-2"
-        } my-6 gap-3 px-4`}
+        } my-2 gap-3 px-4`}
       >
         {title && (
           <h1 className="text-2xl lg:text-3xl xl:text-4xl font-semibold">
