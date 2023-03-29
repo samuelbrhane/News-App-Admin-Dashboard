@@ -4,7 +4,7 @@
 
 @layer base {
   .link {
-    @apply bg-[#231a23] text-white w-full flex items-center gap-2 px-4 rounded py-2 hover:scale-[1.02] hover:bg-[#31658d];
+    @apply bg-[#231a23] text-white w-full flex items-center gap-2 px-4 rounded py-2 hover:scale-[1.02] hover:bg-[#792c79];
   }
   .btn {
     @apply rounded-full w-8 h-8 p-2 text-white cursor-pointer;

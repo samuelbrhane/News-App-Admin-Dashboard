@@ -34,8 +34,8 @@ const Home = () => {
   for (let i = 0; i < totalPage; i++) {
     paginationBtns.push(
       <button
-        className={`bg-blue-400 w-6 h-6 text-white rounded hover:bg-red-400 hover:scale-[1.05] flex items-center justify-center ${
-          pageNo === i && "bg-red-400"
+        className={`bg-[#231a23] w-6 h-6 text-white rounded hover:bg-[#792c79] hover:scale-[1.05] flex items-center justify-center ${
+          pageNo === i && "bg-[#792c79]"
         }`}
         key={i}
         onClick={() => setPageNo(i)}

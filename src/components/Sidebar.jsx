@@ -1,8 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { AiTwotoneHome } from "react-icons/ai";
 import { MdCreateNewFolder } from "react-icons/md";
 
 const Sidebar = ({ title }) => {
+  const { pathname } = useLocation();
+  console.log("pathName: " + pathname);
+
   return (
     <section className="w-full h-full py-[10px]">
       <div
@@ -16,11 +19,14 @@ const Sidebar = ({ title }) => {
           </h1>
         )}
 
-        <Link to="/" className="link">
+        <Link to="/" className={`link ${pathname === "/" && "bg-[#792c79]"}`}>
           <AiTwotoneHome className="text-xl" />
           <p>Home</p>
         </Link>
-        <Link to="/create" className="link">
+        <Link
+          to="/create"
+          className={`link ${pathname === "/create" && "bg-[#792c79]"}`}
+        >
           <MdCreateNewFolder className="text-xl" />
           <p>Create</p>
         </Link>
