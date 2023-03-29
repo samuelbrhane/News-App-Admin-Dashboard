@@ -1,7 +1,7 @@
 import React from "react";
 import { AiFillEdit, AiTwotoneDelete } from "react-icons/ai";
 
-const NewsCard = ({ news }) => {
+const NewsCard = ({ news, deleteNews }) => {
   const { _id, title, content, tags, thumbnail } = news;
   return (
     <section className="flex justify-center mb-2">
@@ -39,7 +39,10 @@ const NewsCard = ({ news }) => {
         </div>
         {/* edit and delete */}
         <div className="flex mt-1 gap-3 px-2 border-t-2 border-gray-300 pt-1">
-          <AiTwotoneDelete className="btn bg-red-400" />
+          <AiTwotoneDelete
+            className="btn bg-red-400"
+            onClick={() => deleteNews(_id)}
+          />
           <AiFillEdit className="btn bg-blue-400" />
         </div>
       </div>
