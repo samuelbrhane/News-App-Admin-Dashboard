@@ -2,19 +2,7 @@ import React from "react";
 import { AiFillEdit, AiTwotoneDelete } from "react-icons/ai";
 
 const NewsCard = ({ news }) => {
-  console.log("news", news);
-  const {
-    _id,
-    title,
-    content,
-    meta,
-    tags,
-    authorMedia,
-    writer,
-    featured,
-    slug,
-    thumbnail,
-  } = news;
+  const { _id, title, content, tags, thumbnail } = news;
   return (
     <section className="flex justify-center mb-2">
       <div className="rounded-md shadow hover:scale-[1.01] bg-white pb-1 flex flex-col justify-between">
@@ -25,22 +13,27 @@ const NewsCard = ({ news }) => {
               "https://images.pexels.com/photos/97050/pexels-photo-97050.jpeg?auto=compress&cs=tinysrgb&w=600"
             }
             alt="newsThumbnail"
-            className="rounded-t-md h-[240px] w-[400px]"
+            className="rounded-t-md h-[240px] w-full"
           />
           <div className="mt-1 px-2 ">
             <h1 className="text-sm font-bold">{title}</h1>
-            <p>{content}</p>
+            {content.length > 200 ? (
+              <p className="text-sm">{content.slice(0, 200)}...</p>
+            ) : (
+              <p className="text-sm">{content}</p>
+            )}
+
             <div className="mt-1">
-              <p className="flex gap-1 items-end text-sm">
+              <div className="flex gap-1 items-end text-sm">
                 Tags:
-                <span className="flex items-center gap-1">
+                <p className="flex items-center gap-1">
                   {tags.map((tag, index) => (
-                    <p key={index} className="text-[#3486a2] text-[13px]">
+                    <span key={index} className="text-[#3486a2] text-[13px]">
                       #{tag}
-                    </p>
+                    </span>
                   ))}
-                </span>
-              </p>
+                </p>
+              </div>
             </div>
           </div>
         </div>
